@@ -1,0 +1,3 @@
+# 排除掉某些不需要验证的文件
+dist/**/*.js
+node_modules

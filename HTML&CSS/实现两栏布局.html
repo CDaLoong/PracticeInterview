@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            使用 float 左浮左边栏
+            右边模块使用 margin-left 撑出内容块做内容展示
+            为父级元素添加BFC，防止下方元素飞到上方内容 
+        */
+        .box{
+            /* 添加BFC */
+            overflow: hidden;
+        }
+        .left {
+            float: left;
+            width: 200px;
+            background-color: gray;
+            height: 400px;
+        }
+        .right {
+            margin-left: 210px;
+            background-color: lightgray;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">左边</div>
+        <div class="right">右边</div>
+    </div>
+</body>
+</html>
